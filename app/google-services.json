@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "396159369383",
+    "project_id": "tryfib1",
+    "storage_bucket": "tryfib1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396159369383:android:e24e332e082cac24ab1b82",
+        "android_client_info": {
+          "package_name": "com.example.tryfib1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396159369383-vbbtjd7nb3uu5aqkglk1vqnsb1dnnh23.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJBSF7VbPZ34cvaKE-NR6y819uddd5uIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396159369383-vbbtjd7nb3uu5aqkglk1vqnsb1dnnh23.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

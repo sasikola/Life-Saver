@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Blood</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="name">Name</string>
+    <string name="age">Age (Graterthen 18)</string>
+    <string name="gender">Gender</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="location">Location</string>
+    <string name="last_blood_donation_date">Last Blood Donation Date (YYYY/MM/DD)</string>
+    <string name="usereligibilitytext">You are Eligibility for blood donation if u do not have this diseases like a,b,c,d,e,f,g,h check box if ur ELIGIBLE</string>
+    <string name="can_u_donate_blood">can u donate blood</string>
+    <string name="register">Register</string>
+    <string name="thankyou">Thankyou</string>
+</resources>

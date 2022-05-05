@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registration_form"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                />
+
+            <EditText
+                android:id="@+id/userage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/age"
+                android:ems="2"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minHeight="48dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender" />
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/usergender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others"/>
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/blood_group" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:id="@+id/userbloodgroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="A+"/>
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="B+"/>
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="O+"/>
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="AB+"/>
+
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="A-"/>
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="B-"/>
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="O-"/>
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="AB-"/>
+                </RadioGroup></HorizontalScrollView>
+
+            <EditText
+                android:id="@+id/userphonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:minHeight="48dp" />
+
+      <!--      <EditText
+                android:id="@+id/userlastblooddonationdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/last_blood_donation_date"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" /> -->
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/donated_or_not"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I am not donated Blood"
+                />
+
+            <TextView
+                android:id="@+id/usereligibilitytext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/usereligibilitytext"
+                />
+
+
+            <CheckBox
+                android:id="@+id/usereligibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/can_u_donate_blood" />
+
+            <Button
+                android:id="@+id/getlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET LOCATION"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <Button
+                android:id="@+id/registerbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:layout_gravity="center_horizontal"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:id="@+id/HOME"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/HOME_registerbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register" />
+
+        <Button
+            android:id="@+id/HOME_requestblood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="request Blood" />
+
+        <TextView
+            android:id="@+id/gohome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:textAlignment="textEnd"
+            android:textColor="@color/material_dynamic_primary70" />
+
+    </LinearLayout>
+
+
+<!--
+    <include
+        android:id="@+id/registration_layout"
+        layout="@layout/activity_main"
+        android:visibility="gone"
+        />
+    <include
+        android:id="@+id/userdetaileview"
+        layout="@layout/activity_user_detail_view"
+        android:visibility="gone"/>
+
+        -->
+
+</RelativeLayout>
