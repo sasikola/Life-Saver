@@ -8,65 +8,273 @@
     android:orientation="vertical"
     tools:context=".userDetailView">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/bloodRequestView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/blood_group" />
-    <HorizontalScrollView
+        android:orientation="vertical">
+
+        <EditText
+        android:id="@+id/recipientName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioGroup
-            android:orientation="horizontal"
-            android:id="@+id/userbloodgroup"
+        android:layout_height="wrap_content"
+        android:hint="Recipient Name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        />
+
+        <EditText
+        android:id="@+id/recipientAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Recipient Age"
+        android:ems="2"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/recipientPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Phone Number"/>
+
+        <EditText
+            android:id="@+id/recipientHospitalName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hospital Name"/>
+
+        <Button
+            android:id="@+id/getlocation_of_Recipient"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Location" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/blood_group" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RadioButton
-                android:layout_width="70dp"
+            <RadioGroup
+                android:id="@+id/userbloodgroup"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A+"/>
-            <RadioButton
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="B+"/>
-            <RadioButton
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="O+"/>
-            <RadioButton
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="AB+"/>
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="A-"/>
-            <RadioButton
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="B-"/>
-            <RadioButton
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="O-"/>
-            <RadioButton
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="AB-"/>
-        </RadioGroup></HorizontalScrollView>
-    <Button
-        android:id="@+id/getdonorbtn"
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="A+" />
+
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="B+" />
+
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="O+" />
+
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="AB+" />
+
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="A-" />
+
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="B-" />
+
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="O-" />
+
+                <RadioButton
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="AB-" />
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/getdonorbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Donors" />
+
+        </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Recipient_Details"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Donors" />
+        app:cardBackgroundColor="@color/lightGreen"
+        android:outlineAmbientShadowColor="@color/cardview_shadow_end_color"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="14dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/userRV"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginVertical="6dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": "/>
+                <TextView
+                    android:id="@+id/Recipient_Name_textArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Blood Group"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": "/>
+                <TextView
+                    android:id="@+id/Recipient_Bloodgroup_textArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Userbloodgroup"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": "/>
+                <TextView
+                    android:id="@+id/Recipient_Phone_textArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9999999999"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital Name"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": "/>
+                <TextView
+                    android:id="@+id/Recipient_Hospital_textArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital Name"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": "/>
+                <TextView
+                    android:id="@+id/Recipient_Address_textArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp"
+            tools:listitem="@layout/user_item"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

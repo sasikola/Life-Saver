@@ -139,18 +139,25 @@
                 android:inputType="date"
                 android:minHeight="48dp"
                 android:textColorHint="#757575" /> -->
-
-            <CalendarView
-                android:id="@+id/calendarView"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="wrap_content"
+                android:text="Choose Last Blood Donation Date"/>
             <CheckBox
                 android:id="@+id/donated_or_not"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="I am not donated Blood"
+                android:text="I have not donated Blood"
+                android:checked="true"
                 />
+
+                <CalendarView
+                android:visibility="visible"
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
 
             <TextView
                 android:id="@+id/usereligibilitytext"

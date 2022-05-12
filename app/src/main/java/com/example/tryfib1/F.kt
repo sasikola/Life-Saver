@@ -9,6 +9,9 @@ import com.example.tryfib1.R
 import android.widget.CalendarView.OnDateChangeListener
 
 /***************************************************************
+ *
+ * Unwanted class
+ *
  * class F
  * to get date from CalenderView
  * in DD/MM/YYYY format
@@ -28,3 +31,4 @@ class F : AppCompatActivity() {
         }
     }
 }
+
