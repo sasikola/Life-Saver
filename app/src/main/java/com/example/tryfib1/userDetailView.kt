@@ -161,7 +161,7 @@ class userDetailView : AppCompatActivity() {
                                    if(distance(longitude.toDouble(),latitude.toDouble(),a.longitude!!.toDouble(),a.latitude!!.toDouble(),'K') <= 5.0)
                                    userArrayList.add(a!!)
                                    //i+=0.1
-                                  // LastDetail = a.phone.toString()
+                                   // LastDetail = a.phone.toString()
                              //  }
                         }
 
